@@ -1,5 +1,5 @@
-import { OrderSidebar } from "@/components/OrderSidebar";
-import { OrderSummary } from "@/components/OrderSummary";
+import { OrderSidebar } from "@/components/order/OrderSidebar";
+import { OrderSummary } from "@/components/order/OrderSummary";
 
 const Layout = ({
     children,
