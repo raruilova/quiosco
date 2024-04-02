@@ -13,6 +13,7 @@ export const OrderSummary = () => {
     () => order.reduce((total, item) => total + item.quantity * item.price, 0),
     [order]
   );
+  const clearOrder = useStore((state) => state.clearOrder)
 
   const handleCreateOrder = async (formData: FormData) => {
     const data = {
@@ -35,6 +36,9 @@ export const OrderSummary = () => {
         toast.error(issue.message);
       });
     }
+
+    toast.success('Pedido realizado correctamente');
+    clearOrder();
   };
   return (
     <aside className="lg:h-screen lg:overflow-y-scroll md:w-64 lg:w-96 p-5">
